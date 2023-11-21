@@ -1,0 +1,212 @@
+*{/*this means all the code*/
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: #0c111b;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 4%;
+    background: #0c111b;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+
+}
+.brand-logo{
+    height: 70px;
+
+}
+.nav-links{
+    margin-top: 10px;
+    display: flex;/*to appear in a single row*/
+    list-style: none;/*to avoid bullet points*/
+
+}
+.nav-items a{ /*since after class nav items we have one more tag called anchor we need to specify that*/
+    text-decoration: none;/*to avoid underlines or any other decoration on a text*/
+    margin-left: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.9;
+}
+.right-container{
+    display: block;
+    margin-left: auto;
+}
+.search-box{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    width: 250px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0s;
+
+}
+.search-box:focus{
+    width: 400px;
+    border-color: #1f80e0;
+}
+.sub-btn{
+    background-color: #1f80e0;
+    padding: 0 20px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    margin:0 10px;
+}
+.login-link{
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.carousel-container{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;/*to show one image at a time during slidding process*/
+    margin-top: 80px;
+}
+.carousel{
+    display: flex;
+    width: 92%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+
+}
+.slider{
+    flex:0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background-color:rgba(0,0,0,0,5) ;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.slider img{
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.slide-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right,#030b17 80%,#0c111b00);
+    color: #fff;
+}
+.movie-title{
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+
+}
+
+.movie-des{
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+
+
+}
+.video-card-container{
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 10vw;/*10% of body tag*/
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;/*to maintain equal gap between all the cards*/
+}
+.video-card{
+    position: relative;
+    min-width: calc(100%/5-10px);
+    width: calc(100%/5-10px);
+    border-radius: 5px;
+    height: 100%;
+    overflow: hidden;/*it will make sure the image doesnot go out of the div tag*/
+    background-color: #030b17;
+}
+.card-video{
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.card-video,
+.video-card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*to cover the entire div tag*/
+
+}
+.video-card:hover.video-card-image{
+    /* display: none;to hide the image */
+}
+.title{
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+}
+.movies-list{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+.card-container{
+    position:relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 220px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
